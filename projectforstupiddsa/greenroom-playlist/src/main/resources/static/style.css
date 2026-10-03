@@ -1,0 +1,231 @@
+:root {
+  --ink: #e7e7c7;
+  --muted: #889b86;
+  --faint: #52685d;
+  --line: rgba(164, 211, 152, 0.18);
+  --panel: rgba(24, 64, 47, 0.66);
+  --forest: #061b15;
+  --green: #0c2f23;
+  --lime: #d1fa35;
+  --coral: #e8876a;
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+  --mono: "DM Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--forest);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: radial-gradient(
+    circle at 48% -12%,
+    #184b35 0,
+    var(--forest) 40rem
+  );
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  z-index: 10;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.7'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 238px minmax(0, 1fr) 310px;
+  min-height: 100vh;
+}
+
+.sidebar,
+.aside-column {
+  background: rgba(3, 20, 15, 0.45);
+}
+
+.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 35px 20px;
+}
+
+.aside-column {
+  border-left: 1px solid var(--line);
+  padding: 26px 22px;
+}
+
+.main-column {
+  min-width: 0;
+  padding: 25px 56px 80px;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.brand-mark {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  margin: 0 0 65px;
+}
+
+.brand-symbol {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 9px;
+  background: var(--lime);
+  color: #17301e;
+  font-size: 27px;
+  line-height: 22px;
+  transform: rotate(-7deg);
+}
+
+.brand-name {
+  display: block;
+  color: #f1f1dc;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.brand-kicker,
+.eyebrow,
+.mini-label,
+.font-mono-custom {
+  display: block;
+  color: var(--faint);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.brand-kicker {
+  margin-top: 3px;
+  font-size: 8px;
+}
+
+.nav-label {
+  margin: 0 11px 13px;
+  color: #587264;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.nav-label + nav {
+  margin-bottom: 58px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 13px 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #809388;
+  font-size: 15px;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.nav-button:hover {
+  color: var(--ink);
+  background: rgba(122, 173, 113, 0.08);
+}
+
+.nav-button.active {
+  border-color: rgba(170, 221, 123, 0.14);
+  background: rgba(110, 155, 90, 0.18);
+  color: var(--lime);
+}
+
+.nav-count {
+  margin-left: auto;
+  color: var(--faint);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.sidebar-note {
+  margin: 0 11px;
+  color: #91a795;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.sidebar-note p {
+  margin: 12px 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+
+.search-wrap {
+  position: relative;
+  width: min(340px, 70%);
+}
+
+.search-icon {
+  position: absolute;
+  top: 6px;
+  left: 13px;
+  color: #759184;
+  font-size: 22px;
+  transform: rotate(-20deg);
+}
+
+.search-input {
+  width: 100%;
+  padding: 11px 16px 11px 39px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: rgba(15, 48, 35, 0.42);
+  color: var(--ink);
+  font-size: 12px;
+  outline: none; **…**
+
+}

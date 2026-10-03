@@ -1,0 +1,90 @@
+:root {
+    --cream: #FFFDD0;     /* Background */
+    --deep-red: #A82810;  /* Main Details & Text */
+    --soft-red: #e74c3c;  /* Button Hover */
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--deep-red);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-card {
+    border: 3px solid var(--deep-red);
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 10px 10px 0px var(--deep-red); /* Retro block shadow */
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.choice-btn {
+    flex: 1;
+    background-color: transparent;
+    color: var(--deep-red);
+    border: 2px solid var(--deep-red);
+    padding: 15px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choice-btn:hover {
+    background-color: var(--deep-red);
+    color: var(--cream);
+    transform: translateY(-5px);
+}
+
+.emoji {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.game-details {
+    background-color: rgba(168, 40, 16, 0.05); /* Very light red tint */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--deep-red);
+    margin: 15px 0;
+    opacity: 0.3;
+}
+
+#winner-text {
+    margin: 0;
+    font-size: 1.4rem;
+}
